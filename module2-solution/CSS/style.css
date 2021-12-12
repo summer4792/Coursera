@@ -1,171 +1,116 @@
-*{
-    box-sizing: border-box;
-    font-family: Helvetica;
-  }
-  h1{
-    text-align: center;
-    margin-bottom: 50px;
-    margin-top: 50px;
-  }
-  /* Simple Responsive Framework. */
-  .row {
-      width: 100%;
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: poppins;
+/*  background: #fffc56;*/
+}
+
+.container{
+  padding: 5px;
+  /*max-width: 960px;*/
+  width: 95%;
+  margin: 20px auto;
+
+}
+
+header{
+  text-align: center;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  font-size: 170%;
   }
 
-  section{
-    border: 2px solid black;
-    padding: 10px;
-    /*width: 80%;*/
+ .boxes {
+    display: flex;
+    flex-flow: row wrap;
+    
+    justify-content: center;
+    margin: 5px 0; 
+  }
+
+  .box {
+    flex: 1;
+    position: relative;
+    border: 1px solid black;
+    margin: 10px;
     height: 150px;
-    background-color:gray;
-    /*margin-top:10px;*/
+    padding: 10px;
+    background: gray;
+    /*transition: 0.3s;*/
     overflow: auto;
-    position: relative;
+
   }
+
+  .box: first-child {
+    margin-left: 0;
+  }
+
+  .box: last-child {
+    margin-left: 0;
+  }
+
   #task1{
-    background-color: pink;
-    position: relative;
-    top:0;
-    left: 80%;
+      margin:0;
+      border: 0;
+      padding: 0;
+      background-color: pink;
+      position: absolute;
+      top:0;
+      right: 0;
+      text-align: center;
+      width:33.3%;
+      font-size: 125%;
+    }
+    #task2{
+      margin:0;
+      border: 0;
+      padding: 0;
+      background-color: red;
+      position: absolute;
+      top:0;
+      right: 0;
+      text-align: center;
+      width:33.3%;
+      color: white;
+      font-size: 125%;
+    }
+    #task3{
+      margin:0;
+      border: 0;
+      padding: 0;
+      background-color:yellow;
+      position: absolute;
+      top:0;
+      right: 0;
+      text-align: center;
+      width:33.3%;
+      font-size: 125%;
+    }
+
+  @media  screen and (max-width: 992px) {
+  .boxes .box{
+    
+    margin-bottom: 5px;
+    flex-basis: 40%; 
   }
-  #task2{
-    background-color: red;
-    position: relative;
-    top:0;
-    left: 80%;
-    color: white;
-  }
-  #task3{
-    background-color: yellow;
-    position: relative;
-    top:0;
-    left: 80%;
+  .columns .column:last-child {
+    flex-basis: 100%; 
+    margin: 0;
   }
 
-  @media (min-width: 992px) {
-.col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
-  float: left;
-}
-.col-lg-1 {
-  width: 8.33%;
-}
-.col-lg-2 {
-  width: 16.66%;
-}
-.col-lg-3 {
-  width: 25%;
-}
-.col-lg-4 {
-  width: 33.33%;
-}
-.col-lg-5 {
-  width: 41.66%;
-}
-.col-lg-6 {
-  width: 50%;
-}
-.col-lg-7 {
-  width: 58.33%;
-}
-.col-lg-8 {
-  width: 66.66%;
-}
-.col-lg-9 {
-  width: 74.99%;
-}
-.col-lg-10 {
-  width: 83.33%;
-}
-.col-lg-11 {
-  width: 91.66%;
-}
-.col-lg-12 {
-  width: 100%;
-}
+  .columns .columns:nth-last-child(2){
+    margin-right: 0;
+  }
+
+ @media  screen and (max-width: 767px) {
+  .boxes .box{
+    flex-basis: 100%; 
+    /*margin: 0 0 5px 0;*/
+    margin: 10px;
+
+  }
+
+
 }
 
-/********** tablet devices only **********/
-@media (min-width: 768px) and (max-width: 991px) {
-.col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
-  float: left;
-}
-.col-md-1 {
-  width: 8.33%;
-}
-.col-md-2 {
-  width: 16.66%;
-}
-.col-md-3 {
-  width: 25%;
-}
-.col-md-4 {
-  width: 33.33%;
-}
-.col-md-5 {
-  width: 41.66%;
-}
-.col-md-6 {
-  width: 50%;
-}
-.col-md-7 {
-  width: 58.33%;
-}
-.col-md-8 {
-  width: 66.66%;
-}
-.col-md-9 {
-  width: 74.99%;
-}
-.col-md-10 {
-  width: 83.33%;
-}
-.col-md-11 {
-  width: 91.66%;
-}
-.col-md-12 {
-  width: 100%;
-}
-}
-
-/********** mobile devices only **********/
-@media max-width: 767px) {
-.col-s-1, .col-s-2, .col-s-3, .col-s-4, .col-s-5, .col-s-6, .col-s-7, .col-s-8, .col-s-9, .col-s-10, .col-s-11, .col-s-12 {
-  float: left;
-}
-.col-s-1 {
-  width: 8.33%;
-}
-.col-s-2 {
-  width: 16.66%;
-}
-.col-s-3 {
-  width: 25%;
-}
-.col-s-4 {
-  width: 33.33%;
-}
-.col-s-5 {
-  width: 41.66%;
-}
-.col-s-6 {
-  width: 50%;
-}
-.col-s-7 {
-  width: 58.33%;
-}
-.col-s-8 {
-  width: 66.66%;
-}
-.col-s-9 {
-  width: 74.99%;
-}
-.col-s-10 {
-  width: 83.33%;
-}
-.col-s-11 {
-  width: 91.66%;
-}
-.col-s-12 {
-  width: 100%;
-}
-}

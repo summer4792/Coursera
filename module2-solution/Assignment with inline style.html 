@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Module2 Solution</title>
   <link rel="stylesheet" type="text/css" ref="style.css">
-  <!-- <style type="text/css">
+  <style type="text/css">
   
   
   body {
@@ -126,7 +126,7 @@ header{
 
 
 
-  </style> -->
+  </style>
 
 </head>
 
